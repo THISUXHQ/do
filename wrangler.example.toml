@@ -1,0 +1,12 @@
+[[d1_databases]]
+binding = "<D1-BINDING-NAME>"
+database_name = "<DATABASE-NAME>"
+database_id = "<YOUR-D1-DATABASE-ID>"
+
+[[kv_namespaces]]
+binding = "<KV-NAME>"
+id = "<KV-NAMESPACE-ID>"
+
+[[r2_buckets]]
+binding = "<R2-BINDING-NAME>"
+bucket_name = "<R2-BUCKET-NAME>"
