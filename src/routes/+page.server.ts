@@ -9,14 +9,6 @@ export const load = async ({ platform }) => {
 	const randomName = `Random Name ${randomId}`;
 	const randomCompany = `Random Company ${randomId}`;
 
-	// await platform?.env?.DB?.prepare(
-	// 	'INSERT INTO customers (id, company_name, customer_name) VALUES (?, ?, ?)'
-	// )
-	// 	.bind(randomId, randomCompany, randomName)
-	// 	.run();
-
-	// const all_customers = await db?.prepare('SELECT * FROM customers').all();
-
 	await client(db).insert(customers).values({
 		company_name: randomCompany,
 		contact_name: randomName
