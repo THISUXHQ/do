@@ -14,7 +14,7 @@ const config = {
 				exclude: ['<all>']
 			},
 			platformProxy: {
-				persist: './wrangler.toml'
+				persist: 'wrangler.toml'
 			}
 		})
 	}

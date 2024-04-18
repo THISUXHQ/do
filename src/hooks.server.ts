@@ -3,7 +3,7 @@ import { getPlatformProxy } from 'wrangler';
 
 export async function handle({ event, resolve }) {
 	const proxy = await getPlatformProxy({
-		configPath: './wrangler.toml'
+		configPath: 'wrangler.toml'
 	});
 
 	if (event && event.platform && event.platform.env) {
