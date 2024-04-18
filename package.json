@@ -13,8 +13,8 @@
     "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
-    "dbpush": "bunx wrangler d1 execute do --file=./src/lib/server/schema/index.sql --remote",
-    "dbget": "bunx wrangler d1 execute do --command=\"SELECT * FROM Customers\" --remote"
+    "dbpush": "bunx wrangler d1 execute do --file=./src/lib/server/schema/index.sql --local",
+    "dbget": "bunx wrangler d1 execute do --command=\"SELECT * FROM customers\" --local"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",
@@ -24,6 +24,7 @@
     "@types/eslint": "^8.56.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
+    "drizzle-kit": "^0.20.14",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.36.0-next.4",
@@ -39,6 +40,8 @@
   "type": "module",
   "dependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",
+    "drizzle-orm": "^0.30.8",
+    "nanoid": "^5.0.7",
     "wrangler": "^3.48.0"
   }
 }

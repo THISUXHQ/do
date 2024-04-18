@@ -1,3 +1,4 @@
 DROP TABLE IF EXISTS Customers;
-CREATE TABLE IF NOT EXISTS Customers (CustomerId INTEGER PRIMARY KEY, CompanyName TEXT, ContactName TEXT);
-INSERT INTO Customers (CustomerID, CompanyName, ContactName) VALUES (1, 'Alfreds Futterkiste', 'Maria Anders'), (4, 'Around the Horn', 'Thomas Hardy'), (11, 'Bs Beverages', 'Victoria Ashworth'), (13, 'Bs Beverages', 'Random Name');
+CREATE TABLE IF NOT EXISTS customers (id TEXT PRIMARY KEY, company_name TEXT, contact_name TEXT);
+
+INSERT INTO customers (id, company_name, contact_name) VALUES ('ALFKI', 'Alfreds Futterkiste', 'Maria Anders');
