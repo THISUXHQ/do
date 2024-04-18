@@ -13,8 +13,8 @@
     "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
-    "db:push": "bunx wrangler d1 execute bookmarks --file=./src/lib/server/schema/index.sql",
-    "db:get": "bunx wrangler d1 execute bookmarks --command=\"SELECT * FROM Customers\""
+    "dbpush": "bunx wrangler d1 execute do --file=./src/lib/server/schema/index.sql --remote",
+    "dbget": "bunx wrangler d1 execute do --command=\"SELECT * FROM Customers\" --remote"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",
