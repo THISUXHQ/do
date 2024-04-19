@@ -6,7 +6,7 @@ export async function handle({ event, resolve }) {
 		configPath: 'wrangler.toml'
 	});
 
-	if (event && event.platform && event.platform.env) {
+	if (event?.platform?.env) {
 		event.platform.env.DB = proxy.env.DB as D1Database;
 		event.platform.env.KV = proxy.env.KV as KVNamespace;
 	}
